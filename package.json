@@ -8,8 +8,8 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
+    "start": "cross-env NODE_ENV=production nest start",
+    "start:dev": "cross-env NODE_ENV=development nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main"
   },
@@ -20,6 +20,7 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/sequelize": "^10.0.1",
+    "cross-env": "^7.0.3",
     "mysql2": "^3.10.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
